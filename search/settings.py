@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = 'search.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'search (https://www.youtube.com/)'
+USER_AGENT = 'search ()'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -91,4 +91,4 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 
-HTTPERROR_ALLOWED_CODES = [301, 302, ...]
+HTTPERROR_ALLOWED_CODES = [301, 302,]
