@@ -1,5 +1,7 @@
 import scrapy
 
+from search.items import SearchItem
+
 
 class Hex360(scrapy.Spider):
     """_summary_
@@ -17,8 +19,8 @@ class Hex360(scrapy.Spider):
     allowed_domains = ['hex360.com.br']
     start_urls = ['https://www.hex360.com.br/']
 
-    async def parse(self, response):
-        """_summary_
+    def parse(self, response):
+        """Metho the extract
 
         Args:
             response (list): return response list in Json.
@@ -26,8 +28,11 @@ class Hex360(scrapy.Spider):
         Yields:
             _type_: _description_
         """
-        for div in response.css("div"):
 
-            text_hex = div.css('div.slider-p-2::text').getall()
+        for div in response.css('div'):
 
-            yield {'text': text_hex}
+            link = div.css('h1.tit-base.solucoes::text').extract()
+            title = div.css('div.slider-p-2.top::text').extract()
+            text = div.css('div.slider-p-2.top::text').extract()
+
+            yield {'link': link, 'title': title, 'text': text}
