@@ -21,7 +21,7 @@ class ScriptSpider(scrapy.Spider):
     allowed_domains = ['www.sinj.df.gov.br/']
 
     def start_requests(self):
-        """Method to extract data from three urls.
+        """Method to extract data from many urls.
 
         Yields:
             urls: Fetch data from selected urls. 
