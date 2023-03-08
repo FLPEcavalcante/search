@@ -11,4 +11,3 @@ from itemadapter import ItemAdapter
 class SearchPipeline:
     def process_item(self, item, spider):
         return item
-
