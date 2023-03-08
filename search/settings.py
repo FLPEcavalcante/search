@@ -19,6 +19,9 @@ USER_AGENT = 'search ()'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+FEED = 'json'
+FEED_EXPORT_ENCODING = 'utf-8'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 
@@ -91,4 +94,4 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 
-HTTPERROR_ALLOWED_CODES = [301, 302,]
+HTTPERROR_ALLOWED_CODES = [301, 302, ]

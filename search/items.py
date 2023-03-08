@@ -5,11 +5,9 @@ class SearchItem(scrapy.Item):
     """Define the fields for your item. 
 
     Args:
-        scrapy (Web crawler): _description_
+        scrapy (Web crawler): Extract data from the variables below.
     """
 
-    title = scrapy.Field()
-    author = scrapy.Field()
-    text = scrapy.Field()
-    link = scrapy.Field()
+    data = scrapy.Field()
+
     pass
