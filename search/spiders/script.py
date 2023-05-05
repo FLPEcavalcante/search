@@ -36,6 +36,7 @@ class ScriptSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
+        import pdb; pdb.set_trace()
         """Method the extraction scrapy of url.
 
         Args:
